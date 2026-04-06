@@ -23,7 +23,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Youth Fashion House – Quality Products at Best Prices</title>
+        <title>Youth Icon Hub – Quality Products at Best Prices</title>
         <meta name="description" content="Shop quality products with fast delivery, easy returns and best prices." />
       </Helmet>
 {/* Moving Strip */}

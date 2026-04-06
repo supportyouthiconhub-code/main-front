@@ -8,9 +8,9 @@ import { updateSettings } from '../../redux/slices/settingsSlice';
 
 const TABS = [
   { id: 'general',  label: 'Store'    },
-  { id: 'shipping', label: 'Shipping' },
-  { id: 'cms',      label: 'CMS Pages'},
-  { id: 'razorpay', label: 'Razorpay' },
+  // { id: 'shipping', label: 'Shipping' },
+  // { id: 'cms',      label: 'CMS Pages'},
+  // { id: 'razorpay', label: 'Razorpay' },
   { id: 'password', label: 'Password' },
 ];
 
@@ -27,7 +27,7 @@ const Card = ({ title, subtitle, children }) => (
 /* ── General ─────────────────────────────────────────── */
 function TabGeneral() {
   const dispatch  = useDispatch();
-  const [form,    setForm]    = useState({ store_name:'Youth Fashion House', store_email:'', store_phone:'' });
+  const [form,    setForm]    = useState({ store_name:'Youth Icon Hub', store_email:'', store_phone:'' });
   const [loading, setLoading] = useState(true);
   const [saving,  setSaving]  = useState(false);
 
@@ -50,7 +50,7 @@ function TabGeneral() {
   return (
     <div className="space-y-5">
       <Card title="Store Information" subtitle="Basic details shown to customers">
-        {[['store_name','Store Name','Youth Fashion House'],['store_email','Support Email','support@youthfashionhouse.com'],['store_phone','Support Phone','+91 9876543210']].map(([k,l,ph]) => (
+        {[['store_name','Store Name','Youth Icon Hub'],['store_email','Support Email','support@youthfashionhouse.com'],['store_phone','Support Phone','+91 9876543210']].map(([k,l,ph]) => (
           <div key={k}>
             <label className="block text-sm font-semibold text-gray-700 mb-1.5">{l}</label>
             <input type="text" value={form[k] || ''} onChange={e => setForm(f => ({ ...f, [k]: e.target.value }))}

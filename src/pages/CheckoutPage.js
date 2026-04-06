@@ -266,7 +266,7 @@ prefill: {
 
   return (
     <>
-      <Helmet><title>Checkout – Youth Fashion House</title></Helmet>
+      <Helmet><title>Checkout – Youth Icon Hub</title></Helmet>
 
       <div className="page py-8 sm:py-12">
         <h1 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 mb-8">Checkout</h1>

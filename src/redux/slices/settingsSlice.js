@@ -9,7 +9,7 @@ export const fetchPublicSettings = createAsyncThunk('settings/fetchPublic',
 );
 
 const DEFAULTS = {
-  store_name:  'Youth Fashion House',
+  store_name:  'Youth Icon Hub',
   store_email: 'support@youthfashionhouse.com',
   store_phone: '+91 9876543210',
 };

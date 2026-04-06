@@ -70,7 +70,7 @@ export default function LoginPage() {
 
   return (
     <>
-      <Helmet><title>Login – Youth Fashion House</title></Helmet>
+      <Helmet><title>Login – Youth Icon Hub</title></Helmet>
       <div className="min-h-[80vh] flex items-center justify-center px-4 py-12 bg-gray-50">
         <div className="w-full max-w-md">
 
@@ -80,7 +80,7 @@ export default function LoginPage() {
               <div className="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center shadow-sm">
                 <span className="text-white font-bold text-base">S</span>
               </div>
-              <span className="font-display font-bold text-2xl text-gray-900">Youth Fashion House</span>
+              <span className="font-display font-bold text-2xl text-gray-900">Youth Icon Hub</span>
             </Link>
             <h1 className="font-display font-bold text-3xl text-gray-900">
               {otpSent ? 'Enter OTP' : 'Welcome Back'}

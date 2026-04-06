@@ -262,7 +262,7 @@ export default function ProductList() {
 
   return (
     <>
-      <Helmet><title>{pageTitle} – Youth Fashion House</title></Helmet>
+      <Helmet><title>{pageTitle} – Youth Icon Hub</title></Helmet>
 
       <div className="page py-8">
 

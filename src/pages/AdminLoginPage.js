@@ -27,7 +27,7 @@ export default function AdminLoginPage() {
 
   return (
     <>
-      <Helmet><title>Admin Login – Youth Fashion House</title></Helmet>
+      <Helmet><title>Admin Login – Youth Icon Hub</title></Helmet>
       <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4 py-12">
         <div className="w-full max-w-md">
           <div className="text-center mb-8">
@@ -35,7 +35,7 @@ export default function AdminLoginPage() {
               <div className="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center">
                 <span className="text-white font-bold">S</span>
               </div>
-              <span className="font-display font-bold text-2xl text-gray-900">Youth Fashion House</span>
+              <span className="font-display font-bold text-2xl text-gray-900">Youth Icon Hub</span>
             </Link>
             <div className="inline-flex items-center gap-1.5 bg-orange-50 text-orange-700 text-xs font-semibold px-3 py-1.5 rounded-full border border-orange-100 mb-4">
               🛡️ Admin Portal

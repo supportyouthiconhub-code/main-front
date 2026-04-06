@@ -171,7 +171,7 @@ const sizeChart = getSizeChart();
   return (
     <>
       <Helmet>
-        <title>{product.name} – Youth Fashion House</title>
+        <title>{product.name} – Youth Icon Hub</title>
         <meta name="description" content={product.shortDescription || product.description?.slice(0, 160)} />
       </Helmet>
 

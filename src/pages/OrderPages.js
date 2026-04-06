@@ -25,7 +25,7 @@ export function OrderSuccess() {
 
   return (
     <>
-      <Helmet><title>Order Confirmed – Youth Fashion House</title></Helmet>
+      <Helmet><title>Order Confirmed – Youth Icon Hub</title></Helmet>
       <div className="page py-16 max-w-xl mx-auto text-center">
         <div className="card p-10 space-y-6">
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto">
@@ -66,7 +66,7 @@ export function OrderFailure() {
 
   return (
     <>
-      <Helmet><title>Payment Failed – Youth Fashion House</title></Helmet>
+      <Helmet><title>Payment Failed – Youth Icon Hub</title></Helmet>
       <div className="page py-16 max-w-xl mx-auto text-center">
         <div className="card p-10 space-y-6">
           <div className="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto">
@@ -99,7 +99,7 @@ export function OrdersPage() {
 
   return (
     <>
-      <Helmet><title>My Orders – Youth Fashion House</title></Helmet>
+      <Helmet><title>My Orders – Youth Icon Hub</title></Helmet>
       <div className="page py-8 sm:py-12 max-w-4xl mx-auto">
         <h1 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 mb-8">My Orders</h1>
         {orders.length === 0 ? (
@@ -153,7 +153,7 @@ export function OrderDetailPage() {
 
   return (
     <>
-      <Helmet><title>Order #{order.orderNumber} – Youth Fashion House</title></Helmet>
+      <Helmet><title>Order #{order.orderNumber} – Youth Icon Hub</title></Helmet>
       <div className="page py-8 sm:py-12 max-w-4xl mx-auto">
         <Link to="/orders" className="text-sm text-orange-600 hover:underline mb-6 inline-block">← Back to Orders</Link>
         <div className="flex flex-wrap items-center justify-between gap-3 mb-8">

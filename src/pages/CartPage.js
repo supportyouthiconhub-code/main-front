@@ -33,7 +33,7 @@ export default function CartPage() {
 
   return (
     <>
-      <Helmet><title>Your Cart – Youth Fashion House</title></Helmet>
+      <Helmet><title>Your Cart – Youth Icon Hub</title></Helmet>
       <div className="page py-8 sm:py-12">
         <h1 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 mb-8">
           Shopping Cart
