@@ -186,7 +186,7 @@ export default function Home() {
             Pay Only Shipping Upfront
           </h3>
           <p className="text-gray-400 max-w-md text-sm leading-relaxed">
-            Use Partial Payment — pay shipping charges now, rest on delivery. Shop with confidence.
+     Use Partial Payment — Pay Shipping Charges Now, Rest on Delivery. Shop with Confidence.
           </p>
         </div>
         <Link to="/products"
