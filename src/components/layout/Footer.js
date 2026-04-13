@@ -82,7 +82,7 @@ export default function Footer() {
   {/* WhatsApp */}
   <li>
     <a 
-      href="https://wa.me/919911234567"
+      href="https://chat.whatsapp.com/EBB3fmgmU79FWKbtjTGO2i"
       target="_blank"
       rel="noopener noreferrer"
       className=" rounded-full bg-gray-800 text-gray-400 hover:text-green-500 hover:bg-gray-700 transition"
@@ -94,7 +94,7 @@ export default function Footer() {
   {/* Instagram */}
   <li>
     <a 
-      href="https://instagram.com/yourusername"
+      href="https://www.instagram.com/___youth___icon___hub?igsh=N2V5M2V0eDk2cmZh&utm_source=qr"
       target="_blank"
       rel="noopener noreferrer"
       className=" rounded-full bg-gray-800 text-gray-400 hover:text-pink-500 hover:bg-gray-700 transition"
