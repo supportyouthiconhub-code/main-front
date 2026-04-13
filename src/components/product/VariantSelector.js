@@ -76,7 +76,7 @@ function resolveColor(val) {
 /* ─────────────────────────────────────────────────────
  * VariantSelector
  * ───────────────────────────────────────────────────── */
-export default function VariantSelector({ product, onSelect }) {
+export default function VariantSelector({ product, onSelect, onColorSelect }) {
   const attrs = product.attributes || [];
 
   const [selected, setSelected] = useState({});
@@ -119,16 +119,22 @@ export default function VariantSelector({ product, onSelect }) {
   };
 
   /* ── Selecting a value clears downstream attrs ─────────── */
-  const toggle = (attrName, value) => {
-    setSelected(prev => {
-      const isSel = prev[attrName] === value;
-      const next  = { ...prev, [attrName]: isSel ? undefined : value };
-      // Clear all attrs that come after the one just changed
-      const idx = attrs.findIndex(a => a.name === attrName);
-      attrs.slice(idx + 1).forEach(a => { next[a.name] = undefined; });
-      return next;
-    });
-  };
+const toggle = (attrName, value) => {
+  setSelected(prev => {
+    const isSel = prev[attrName] === value;
+    const next  = { ...prev, [attrName]: isSel ? undefined : value };
+
+    // 🔥 send color selection to parent
+    if (attrName.toLowerCase() === 'color') {
+      if (onColorSelect) onColorSelect(isSel ? null : value);
+    }
+
+    const idx = attrs.findIndex(a => a.name === attrName);
+    attrs.slice(idx + 1).forEach(a => { next[a.name] = undefined; });
+
+    return next;
+  });
+};
 
   const isColorAttr = (n) => /colou?r/i.test(n);
   const isSizeAttr  = (n) => /size/i.test(n);
