@@ -9,7 +9,7 @@ import { updateSettings } from '../../redux/slices/settingsSlice';
 const TABS = [
   { id: 'general',  label: 'Store'    },
   // { id: 'shipping', label: 'Shipping' },
-  { id: 'cms',      label: 'CMS Pages'},
+  // { id: 'cms',      label: 'CMS Pages'},
   // { id: 'razorpay', label: 'Razorpay' },
   { id: 'password', label: 'Password' },
 ];
