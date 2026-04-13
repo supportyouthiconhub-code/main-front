@@ -45,6 +45,24 @@ const [selectedColor, setSelectedColor] = useState(null);
 useEffect(() => {
   setImgIdx(0);
 }, [variant, selectedColor]);
+
+
+useEffect(() => {
+  if (!selectedColor || !product?.variants?.length) return;
+
+  // find first variant of selected color (with stock)
+  const firstVariant = product.variants.find(
+    v =>
+      v.isActive &&
+      v.attributes?.color?.toLowerCase() === selectedColor.toLowerCase() &&
+      (v.stock ?? 0) > 0
+  );
+
+  if (firstVariant) {
+    setVariant(firstVariant);
+  }
+}, [selectedColor, product]);
+
 useEffect(() => {
   setVariant(null);
 }, [selectedColor]);
