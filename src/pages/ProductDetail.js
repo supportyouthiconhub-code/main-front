@@ -58,11 +58,11 @@ useEffect(() => {
       (v.stock ?? 0) > 0
   );
 
-  if (firstVariant) {
-    setVariant(firstVariant);
-  }
+if (firstVariant && !hasSize) {
+  setVariant(firstVariant);
+}
 }, [selectedColor, product]);
-
+const hasSize = product?.attributes?.some(attr => attr.name === 'size');
 useEffect(() => {
   setVariant(null);
 }, [selectedColor]);
@@ -84,8 +84,26 @@ useEffect(() => {
   const price   = variant?.price ?? product.minPrice ?? product.basePrice ?? 0;
   const cmpAt   = variant?.compareAtPrice ?? product.compareAtPrice;
   const disc    = cmpAt && cmpAt > price ? Math.round(((cmpAt - price) / cmpAt) * 100) : null;
-  const inStock = variant ? (variant.stock ?? 0) > 0 : !hasV;
-  const maxQty  = variant?.stock ?? 99;
+const inStock = (() => {
+  if (!hasV) return true;
+
+  // if NO size required → check color stock
+  if (!hasSize && selectedColor) {
+    const colorVariant = product.variants.find(
+      v =>
+        v.attributes?.color?.toLowerCase() === selectedColor.toLowerCase() &&
+        (v.stock ?? 0) > 0
+    );
+    return !!colorVariant;
+  }
+
+  // if size required → check selected variant
+  if (hasSize && variant) {
+    return (variant.stock ?? 0) > 0;
+  }
+
+  return false;
+})();  const maxQty  = variant?.stock ?? 99;
 
 const images = (() => {
   // 1. If full variant selected → use its images
@@ -107,7 +125,17 @@ const images = (() => {
 })();
 
   const addToCart = async () => {
-    if (hasV && !variant) { toast.error('Please select all options'); return; }
+  if (hasV) {
+    if (!selectedColor) {
+      toast.error('Please select color');
+      return;
+    }
+
+    if (hasSize && !variant) {
+      toast.error('Please select size');
+      return;
+    }
+  }
     setAdding(true);
     try {
       if (token) {
@@ -317,7 +345,10 @@ const sizeChart = getSizeChart();
             )}
 
             {/* Qty + Add to cart */}
-            {(!hasV || variant) && (
+{(!hasV || 
+  (!hasSize && selectedColor) ||   
+  (hasSize && variant)             
+) && (
               <div className="space-y-3">
                 <div className="flex items-center gap-4">
                   {/* Qty control */}
