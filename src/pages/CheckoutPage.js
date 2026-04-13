@@ -92,7 +92,7 @@ const online = payType === 'full' ? finalTotal : partialAmount;
 const cod    = payType === 'full' ? 0 : (finalTotal - partialAmount);
 
 const tot = finalTotal;
-
+const fullTotal = subtotal; 
 
   // Get the address that will be used for the order
   const getOrderAddress = () => {
@@ -440,6 +440,11 @@ prefill: {
                 </span>
                 Payment Method
               </h2>
+<div className="mb-4 p-3 rounded-lg bg-green-50 border border-green-200">
+    <p className="text-sm text-green-700 font-medium">
+      ₹100 discount applicable on orders above ₹2000. This will be applied during checkout page.
+    </p>
+  </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {[
@@ -447,8 +452,7 @@ prefill: {
                     v: 'full',
                     title: 'Full Payment',
                     desc: 'Pay complete amount online via Razorpay',
-                    sub: `Pay ${fmt(tot)} now (If you pay full amount, Shipping charges is Free)`,
-                  },
+sub: `Pay ${fmt(fullTotal)} now (If you pay full amount, Shipping charges is Free)`                  },
                   {
                     v: 'partial',
                     title: 'Partial (COD)',
