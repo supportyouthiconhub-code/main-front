@@ -25,7 +25,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm leading-relaxed">
-              Quality fashion products at the best prices with fast delivery.
+             Quality Fashion Products at the Best Prices with Fast Delivery.
             </p>
           </div>
 
