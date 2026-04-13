@@ -6,7 +6,7 @@ export default function FloatingButtons() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/916239922672"
+        href="https://chat.whatsapp.com/EBB3fmgmU79FWKbtjTGO2i"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300"
@@ -18,7 +18,7 @@ export default function FloatingButtons() {
 
       {/* Call */}
       <a
-        href="tel:6239922672"
+        href="tel:+916239922672"
         className="bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-full shadow-lg transition-all duration-300"
       >
         <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
