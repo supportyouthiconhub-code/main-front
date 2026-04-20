@@ -82,7 +82,7 @@ const partialBaseTotal = subtotal + 100;
 
 const partialAmount =
   subtotal <= 1500
-    ? Math.min(150, partialBaseTotal)
+    ? Math.min(100, partialBaseTotal)
     : Math.round(partialBaseTotal * 0.1);
 
 const codAmount = partialBaseTotal - partialAmount;
